@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交易匯率</title>
+</head>
+<body>
+<h1>即時匯率</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Rate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="rate : ${rateList}">
+        <td th:text="${rate.name}"></td>
+        <td th:text="${rate.rate}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="insert_page">新增匯率</a>
+<a href="update_page">更新匯率</a>
+<a href="delete_page">刪除匯率</a>
+<a href="refresh">刷新匯率</a>
+</body>
+</html>
